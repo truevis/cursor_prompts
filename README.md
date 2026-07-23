@@ -17,7 +17,6 @@ Prompts and lightweight rules for improving Streamlit apps (and related chores) 
 | Path | Owns |
 |------|------|
 | `AGENTS.md` | Cursor Agent rules for Streamlit work |
-| `cursorrules.md` | Same rules as `AGENTS.md`; attach with `@cursorrules.md` in Composer |
 | `prompts/make_app_look_better.md` | Visual/UX polish with native Streamlit patterns |
 | `prompts/paperwhite_theme.md` | Warm e-reader theme via `.streamlit/config.toml` |
 | `prompts/responsive_check.md` | Desktop + mobile layout find/fix checklist |
