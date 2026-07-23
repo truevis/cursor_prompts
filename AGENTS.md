@@ -1,0 +1,20 @@
+- Ensure that no existing functionality is removed unless requested by the user.
+- If working with a Streamlit app in agent mode, do not run bash 'streamlit run' as the app will already be running.
+- Encapsulate all code within separate functions to improve organization and maintainability.
+- Update requirements.txt as needed with no version numbers
+- Only produce output relevant to the question or instructions. Do not add or remove features, code, or details beyond what is explicitly asked.
+- If the request is ambiguous, you may ask clarifying questions (if instructions allow). Otherwise, state briefly that more information is needed.
+- attempt to make everying in defs for easy code maintainability
+- never use st.experimental* fuctions and refer to the Streamlit Docs as needed
+- assume Streamlit app.py is already running and will rerun automatically. check terminal for errors
+- Think carefully and only do the specific task the user has given you with the most concise and elegant solution that changes as little code as possible
+- if writing a Streamlit app, use the latest API functionality documented at https://docs.streamlit.io/develop/api-reference and can use context7 MCP
+- Cursor Agent should minimize API calls and token use and start with correct Python syntax
+- never bash run "streamlit run"
+- avoid using st.rerun() if possible
+- all chat inputs should stay at the bottom of UI
+- prefer to avoid CSS for layout -- where possible use streamlit methods for UI
+- do not use st.markdown("---") and st.divider in streamlit apps 
+- when displaying markdown in Streamlit, prevent LaTeX rendering (e.g. replace '$' with fullwidth '＄' for display only, not in stored or exported data)
+- Do not use versions in @requirements.txt  
+- Neon MCP must use the Neon account (OAuth in Cursor) or an API key from the org that **owns** the project in `.streamlit/secrets.toml` (`host` = `ep-…-pooler.….neon.tech`). A key from a different org only lists that org’s projects.
